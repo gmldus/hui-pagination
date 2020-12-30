@@ -1,6 +1,6 @@
 {
   "name": "hui-pagination",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "description": "Pagination UI Component",
   "main": "dist/hui-pagination.js",
   "files": [
