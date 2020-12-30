@@ -1,5 +1,7 @@
 # Pagination :blue_book:
 
+[![Version](https://img.shields.io/npm/v/hui-pagination.svg)](https://www.npmjs.com/package/hui-pagination)
+
 Pagination provides you a page information.
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/38400989/103376519-311db800-4b20-11eb-95d8-75f3ae4cff90.gif)
