@@ -1,0 +1,37 @@
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.pagination {
+  display: inline-flex;
+}
+
+.button {
+  width: 36px;
+  height: 36px;
+  margin: 2px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  cursor: pointer;
+  background-color: rgba(240, 243, 244, 1);
+  color: rgba(44, 62, 80, 1);
+  transition: all 0.25s;
+}
+.button:hover {
+  background-color: rgba(230, 233, 234, 1);
+}
+
+.focus {
+  width: 36px;
+  height: 36px;
+  margin: 2px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  background-color: rgba(26, 92, 255, 1);
+  color: white;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
