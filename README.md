@@ -40,9 +40,9 @@ The option will have **totalPages** and **visiblePages** property.
 ```javascript
 const container = document.getElementById('pagination');
 const option = {
-  /* This is default value. */ totalPages: 20,
+  totalPages: 20,
   visiblePages: 10,
-};
+}; /* This is default value. */
 
 const instance = new Pagination(container, option);
 
