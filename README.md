@@ -35,13 +35,23 @@ import Pagination from 'hui-pagination'; /* ES6 */
 ```
 
 You can create an instance by passing the container element and option.
-The option will have **totalPages** and **visiblePages** property.
+
+Information about each option is as follows:
+
+| Name         | Type   | Value                                                                     |
+| ------------ | ------ | ------------------------------------------------------------------------- |
+| totalPages   | number | Number ot pages your data will have.                                      |
+| visiblePages | number | Number of pages you can see in one rotation.                              |
+| bgColor      | string | Color of focused page button. It can be assigned color name or hex value. |
+
+bgColor can accommodate color name, hex value
 
 ```javascript
 const container = document.getElementById('pagination');
 const option = {
   totalPages: 20,
   visiblePages: 10,
+  bgColor: 'rgba(26, 92, 255, 1)',
 }; /* This is default value. */
 
 const instance = new Pagination(container, option);
