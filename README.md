@@ -44,8 +44,6 @@ Information about each option is as follows:
 | visiblePages | number | Number of pages you can see in one rotation.                              |
 | bgColor      | string | Color of focused page button. It can be assigned color name or hex value. |
 
-bgColor can accommodate color name, hex value
-
 ```javascript
 const container = document.getElementById('pagination');
 const option = {
