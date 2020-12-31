@@ -12,7 +12,7 @@ export const extend = (origin, extra) => {
 
 export const replaceTemplateByContext = (htmlString, context) => {
   let translatedHtml = htmlString;
-  const targets = translatedHtml.match(/{{\s[a-z]+\s}}/g);
+  const targets = translatedHtml.match(/{{\s[a-zA-Z]+\s}}/g);
 
   if (!targets) return htmlString;
 

@@ -6,6 +6,7 @@ import { extend } from './utils.js';
 const defaultOption = {
   totalPages: 20,
   visiblePages: 10,
+  bgColor: 'rgba(26, 92, 255, 1)',
 };
 
 class Pagination {
@@ -22,6 +23,7 @@ class Pagination {
       startPage: this.startPage,
       endPage: this.endPage,
       totalPages: this.options.totalPages,
+      bgColor: this.options.bgColor,
     };
 
     this.handler = {

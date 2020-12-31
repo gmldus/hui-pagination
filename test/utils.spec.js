@@ -54,7 +54,7 @@ describe('Util Test', () => {
   });
 
   describe('Replace html string according to variable', () => {
-    it('should receive number value', () => {
+    it('should be able to receive number value', () => {
       //gievn
       const htmlString = '<span>This is {{ num }}</span>';
       const expectedValue = '<span>This is 3</span>';
@@ -66,7 +66,7 @@ describe('Util Test', () => {
       expect(result).toBe(expectedValue);
     });
 
-    it('should receive string value', () => {
+    it('should be able to receive string value', () => {
       //gievn
       const htmlString = '<button>{{ girl }} and {{ boy }}</button>';
       const expectedValue = '<button>Susan and Mike</button>';
@@ -81,15 +81,15 @@ describe('Util Test', () => {
       expect(result).toBe(expectedValue);
     });
 
-    it('should receive only a to z string key', () => {
+    it('should receive only a to z or A to Z string key', () => {
       //gievn
-      const htmlString = '<span>{{ activity }} with {{ Who }}</span>';
-      const expectedValue = '<span>study with {{ Who }}</span>';
+      const htmlString = '<span>{{ activity }} with {{ who3 }}</span>';
+      const expectedValue = '<span>study with {{ who3 }}</span>';
 
       //when
       const result = replaceTemplateByContext(htmlString, {
         activity: 'study',
-        Who: 'me',
+        who3: 'me',
       });
 
       //then

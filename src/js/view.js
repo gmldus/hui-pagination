@@ -8,8 +8,8 @@ const defaultTemplate = {
   disabledPrevButton: '<button class="disabled button">prev</button>',
   disabledNextButton: '<button class="disabled button">next</button>',
   page: '<button class="button">{{ num }}</button>',
-  currentPage: '<button class="focus">{{ num }}</button>',
-  hh: '<i class="material-icons>chevron_left</i>',
+  currentPage:
+    '<button class="focus" style="background-color: {{ bgColor }}">{{ num }}</button>',
 };
 
 class View {
@@ -22,6 +22,7 @@ class View {
     this.startPage = viewData.startPage;
     this.endPage = viewData.endPage;
     this.totalPages = viewData.totalPages;
+    this.bgColor = viewData.bgColor;
 
     this.goPrevPage = handler.goPrevPage;
     this.goNextPage = handler.goNextPage;
@@ -54,7 +55,10 @@ class View {
     for (let i = this.startPage; i <= this.endPage; i++) {
       if (i === this.currentPage) {
         const button = createElementByTemplate(
-          replaceTemplateByContext(this.template.currentPage, { num: i })
+          replaceTemplateByContext(this.template.currentPage, {
+            num: i,
+            bgColor: this.bgColor,
+          })
         );
         button.addEventListener('click', this.selectPage);
         this.containerElement.appendChild(button);
